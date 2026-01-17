@@ -1,0 +1,279 @@
+#LetterSection{
+  background-color: #7a5c3e;
+  color: white;
+  height: 40vh;
+  padding-top: 0.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+#LetterSection h1{
+  font-size: 16vw;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+
+  /* Parallax Section */
+        .parallax-section {
+            background-image: url('Images/HomePageImg.png'); /* replace with your image */
+            min-height: 100vh;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Overlay */
+        .parallax-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #6e977b73;
+        }
+
+        /* Content */
+        .parallax-content {
+            position: relative;
+            color: #fff;
+            text-align: center;
+            max-width: 700px;
+        }
+
+        .parallax-content h1 {
+            font-size: 3rem;
+            font-weight: 700;
+        }
+
+        .parallax-content p {
+            font-size: 1.2rem;
+            margin: 20px 0;
+        }
+
+        /* Normal Section */
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        /* Mobile Fix (parallax disabled on small devices) */
+        @media (max-width: 768px) {
+            .parallax-section {
+                background-attachment: scroll;
+            }
+        }
+
+/* Transparent navbar */
+.custom-navbar {
+    background: transparent !important;
+    transition: background 0.3s ease;
+}
+
+/* Toggler icon white */
+.custom-navbar .navbar-toggler-icon {
+    filter: invert(1);
+}
+
+/* Nav link hover */
+.custom-navbar .nav-link:hover {
+    color: #9be7a0 !important;
+}
+
+/* Mobile menu background */
+@media (max-width: 991px) {
+    .custom-navbar .navbar-collapse {
+        background: rgba(0, 0, 0, 0.85);
+        padding: 12px;
+        border-radius: 10px;
+    }
+}
+.custom-navbar.scrolled {
+    background: rgba(0, 0, 0, 0.9) !important;
+    backdrop-filter: blur(8px);
+}
+
+
+.split-splide-section {
+    background: #f8f9fa;
+}
+/* 
+/* Splide images */
+.splide__slide img {
+    width: 100%;
+    height: 75vh;
+    object-fit: cover;
+}
+
+/* Content side */
+.content-side {
+    background: #ffffff;
+}
+
+/* Mobile behavior */
+@media (max-width: 991px) {
+    .splide__slide img {
+        height: 50vh;
+    }
+
+    .content-side {
+        text-align: center;
+    }
+} 
+
+
+#LetterSection {
+  background-color: #7a5c3e;
+  color: white;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+#LetterSection h1 {
+  font-size: 16vw;
+  text-transform: uppercase;
+  font-weight: 500;
+  white-space: nowrap;
+  will-change: transform;
+}
+
+
+.plant-images {
+  position: relative;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  overflow: hidden;
+}
+
+.PlantSecImg {
+  width: 220px;
+  max-width: 45vw;
+  will-change: transform, opacity;
+}
+
+/* Optional depth positioning */
+.img-left {
+  transform-origin: center;
+}
+
+.img-right {
+  transform-origin: center;
+}
+
+
+.marquee-section {
+  background: #7a5c3e;
+  overflow: hidden;
+  padding: 40px 0;
+}
+
+.marquee {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  gap: 60px;
+}
+
+.marqueeImg {
+  width: 80px;
+  height: auto;
+  flex-shrink: 0;
+  will-change: transform;
+}
+
+/* Mobile scaling */
+@media (max-width: 768px) {
+  .marqueeImg {
+    width: 56px;
+  }
+}
+
+
+.about-section {
+  padding: 100px 0;
+  background: #ffffff;
+}
+
+.about-text .section-tag {
+  display: inline-block;
+  color: #7a5c3e;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.about-text h2 {
+  font-size: 2.6rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.about-image {
+  text-align: center;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 460px;
+  border-radius: 18px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .about-section {
+    padding: 70px 20px;
+    text-align: center;
+  }
+
+  .about-text h2 {
+    font-size: 2rem;
+  }
+
+  .about-image {
+    margin-top: 40px;
+  }
+}
+
+.contact-section {
+  background: #f6fff9;
+}
+
+.contact-box {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.map-box {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  min-height: 420px;
+}
+
+.form-control {
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.form-control:focus {
+  border-color: #198754;
+  box-shadow: none;
+}
