@@ -1,17 +1,19 @@
-#LetterSection{
-  background-color: #7a5c3e;
-  color: white;
-  height: 40vh;
-  padding-top: 0.5rem;
-  white-space: nowrap;
-  overflow: hidden;
+#LetterSection {
+    background-color: #7a5c3e;
+    color: #f4e4e4;
+    height: 20vh;
+    padding-top: 0.5rem;
+    white-space: nowrap;
+    font-style: oblique;
+    overflow: hidden;
 }
 
-#LetterSection h1{
-  font-size: 16vw;
-  text-transform: uppercase;
-  font-weight: 500;
-}
+    #LetterSection h1 {
+        font-size: 16vw;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-family: cursive;
+    }
 
 
   /* Parallax Section */
