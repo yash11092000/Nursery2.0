@@ -140,3 +140,20 @@ gsap.from(".contact-box", {
       start: "top 75%"
     }
   });
+
+
+document.getElementById("ContactForm").addEventListener("submit", function (e) {
+  e.preventDefault(); // 🔴 THIS IS REQUIRED
+
+  const formData = new FormData(this);
+
+  fetch("https://script.google.com/macros/s/AKfycbyWYwH3THlTwbnCsmJfwPiuMsm22mH21zi6lnT0JIO1Iu8vmafPRj5FRS_JstH0Bz4x/exec", {
+    method: "POST",
+    body: formData
+  })
+  .then(() => {
+    alert("Saved successfully");
+    this.reset();
+  })
+  .catch(err => console.error(err));
+});
