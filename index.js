@@ -37,9 +37,9 @@ gsap.from(".img-left", {
   scrollTrigger: {
     trigger: ".plant-images",
     start: "top 80%",
-    end: "top 40%",
-    scrub: true
-    // markers: true
+    end: "top 80%",
+    scrub: 3,
+    //markers: true
   }
 });
 
@@ -51,8 +51,9 @@ gsap.from(".img-right", {
   scrollTrigger: {
     trigger: ".plant-images",
     start: "top 80%",
-    end: "top 40%",
-    scrub: true
+    end: "top 80%",
+    scrub: 3,
+    //markers: true
   }
 });
 
@@ -157,3 +158,25 @@ document.getElementById("ContactForm").addEventListener("submit", function (e) {
   })
   .catch(err => console.error(err));
 });
+
+// const treeTimeline = gsap.timeline({
+//   scrollTrigger: {
+//     trigger: "#LeftCocoTree1", // Use first tree as trigger
+//     start: "top 20%",
+//     end: "top 70%",
+//     scrub: 4,
+//     markers:true
+//   }
+// });
+
+// // Animate trees with a slight delay between them
+// treeTimeline
+//   .fromTo("#LeftCocoTree1", 
+//     { y: 100, opacity: 0 },
+//     { y: 0, opacity: 1, duration: 0.8, ease: "power2.out" }
+//   )
+//   .fromTo("#LeftCocoTree2", 
+//     { y: 100, opacity: 0 },
+//     { y: 0, opacity: 1, duration: 0.8, ease: "power2.out" },
+//     "-=0.3" // Start second tree 0.3s before first finishes
+//   );

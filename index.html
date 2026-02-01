@@ -11,6 +11,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
 
     <link rel="stylesheet" href="style.css">
+
+    <!-- Add to your HTML head -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Quicksand:wght@500;600&family=Raleway:wght@400;500;600&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -19,9 +26,11 @@
 
 
 
-    <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
+    <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-            <a class="navbar-brand text-white fw-bold" href="#">Sakhare Udyog Samuh</a>
+            <a class="navbar-brand text-white fw-bold" href="#">
+                <img src="./Images/./LOGO.png" alt="" style="width: 6rem;">
+            </a>
 
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -30,84 +39,102 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active text-white" href="#">Home</a>
+                        <a class="nav-link text-dark" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#Plants">Plants</a>
+                        <a class="nav-link text-dark" href="#Plants">Plants</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#About">About Us</a>
+                        <a class="nav-link text-dark" href="#About">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#Contact">Contact Us</a>
+                        <a class="nav-link text-dark" href="#Contact">Contact Us</a>
                     </li>
-
-                </ul>t
+                </ul>
             </div>
         </div>
     </nav>
 
     <!-- Home Section -->
     <!-- Parallax Home Section -->
-    <section class="parallax-section">
+    <!-- <img src="./Images/LeftTreeLeaf.png" alt="" > -->
+     <div style="position: relative;">
 
-        <div class="parallax-content">
-            <h1>Welcome to Green Roots Nursery</h1>
-            <p>Bringing Nature Closer to Your Home</p>
-            <a href="#Plants" class="btn btn-success btn-lg">
+         <img src="./Images/CocoTree.png" alt="" id="LeftCocoTree1">
+         <img src="./Images/CocoTree.png" alt="" id="LeftCocoTree2">
+         <section class="parallax-section">
+             <div class="parallax-content">
+                 <h1>Roots of Green, Wings of Life</h1>
+                 <p>Welcome To Sakhare Nursery</p>
+                 <a href="#Plants" class="btn btn-success btn-lg">
                 Explore Plants
             </a>
+            <img src="./Images/LeftPlant.png" alt="">
         </div>
     </section>
-
+    
+</div>
 
     <!-- Home Section End -->
-    <section id="LetterSection">
+    <!-- <section id="LetterSection">
         <h1>
             Rooted in nature
         </h1>
-    </section>
+    </section> -->
     <div id="Plants">
 
     </div>
     <!-- plants -->
-    <section id="" class="mt-2">
+    <section id="" class="">
         <section class="split-splide-section">
             <div class="container-fluid">
                 <div class="row">
-
                     <!-- Left: Splide Slider -->
                     <div class="col-lg-6 px-0">
                         <div id="plantSplide" class="splide">
-                            <div class="splide__track">
+                            <div class="splide__track mx-5 my-5">
                                 <ul class="splide__list">
 
                                     <li class="splide__slide">
                                         <img src="Images/areca.jpg" class="img-fluid" alt="Areca Palm">
+                                        <h6 class="mt-2 fw-semibold">Areca Palm</h6>
+                                        <p class="text-muted small">Air-purifying indoor plant</p>
                                     </li>
 
                                     <li class="splide__slide">
                                         <img src="Images/Banyan.jpeg" class="img-fluid" alt="Banyan Plant">
+                                        <h6 class="mt-2 fw-semibold">Banyan</h6>
+                                        <p class="text-muted small">Symbol of longevity and strength</p>
                                     </li>
 
                                     <li class="splide__slide">
                                         <img src="Images/Sunflower.jpeg" class="img-fluid" alt="Sunflower">
+                                        <h6 class="mt-2 fw-semibold">Sunflower</h6>
+                                        <p class="text-muted small">Bright, cheerful flowering plant</p>
                                     </li>
 
                                     <li class="splide__slide">
                                         <img src="Images/Banana.jpeg" class="img-fluid" alt="Banana">
+                                        <h6 class="mt-2 fw-semibold">Banana Plant</h6>
+                                        <p class="text-muted small">Fast-growing fruit plant</p>
                                     </li>
 
                                     <li class="splide__slide">
                                         <img src="Images/Coconut.jpeg" class="img-fluid" alt="Coconut">
+                                        <h6 class="mt-2 fw-semibold">Coconut Tree</h6>
+                                        <p class="text-muted small">Tropical multipurpose plant</p>
                                     </li>
 
                                     <li class="splide__slide">
                                         <img src="Images/Parijat.jpeg" class="img-fluid" alt="Parijat">
+                                        <h6 class="mt-2 fw-semibold">Parijat</h6>
+                                        <p class="text-muted small">Sacred fragrant flowering plant</p>
                                     </li>
 
                                     <li class="splide__slide">
                                         <img src="Images/Rose.jpg" class="img-fluid" alt="Rose">
+                                        <h6 class="mt-2 fw-semibold">Rose</h6>
+                                        <p class="text-muted small">Classic ornamental flower</p>
                                     </li>
 
                                 </ul>
@@ -115,44 +142,9 @@
                         </div>
                     </div>
 
-                    <!-- Right: Content -->
-                    <!-- <div class="col-lg-6 content-side p-5">
-                        <h2 class="fw-bold mb-3">Fresh & Healthy Plants</h2>
-                        <p class="text-muted mb-4">
-                            At our nursery, we grow fresh, healthy, and naturally nurtured plants that add beauty, positivity, and vibrant greenery to your home and workspace. Each plant is carefully raised using eco-friendly practices to ensure strong growth, long-lasting health, and natural freshness.
-                        </p>
-
-                        <ul class="list-unstyled mb-4">
-                            <li>✔ Indoor & Outdoor Plants</li>
-                            <li>
-                                <p>We offer a wide variety of indoor plants to enhance your living spaces and outdoor plants to beautify gardens, balconies, and landscapes. From low-maintenance greens to flowering and decorative plants, there’s something for every environment.</p>
-                            </li>
-
-                            <li>✔ Eco-friendly Nursery</li>
-                            <li>
-                                <p>Our nursery follows sustainable and environmentally responsible methods. We avoid harmful chemicals and focus on natural growing techniques to protect both plant health and the environment.</p>
-                            </li>
-                            <li>✔ Home Delivery</li>
-                            <li>
-                                <p>Enjoy the convenience of doorstep delivery. We carefully pack each plant to ensure it reaches you fresh, safe, and ready to thrive in its new home.</p>
-                            </li>
-                        </ul>
-
-                        <p>
-                            Bring nature closer to you with plants that are grown with care, love, and responsibility.
-                        </p>
-
-                        <a href="#Contact" class="btn btn-success btn-lg">
-                            Conact Us
-                        </a>
-
-                        <div class="plant-images">
-                            <img class="PlantSecImg img-left" src="Images/love.svg" alt="Love Plant">
-                            <img class="PlantSecImg img-right" src="Images/normal.svg" alt="Normal Plant">
-                        </div>
-                    </div> -->
-                    <div class="col-lg-6 content-side p-5">
-                        <h2 class="fw-bold mb-3">
+                    <div class="col-lg-6 content-side p-5 plantSection">
+                    <span class="section-tag">Plants</span>
+                         <h2 class="fw-bold mb-3">
                             Fresh & Healthy Plants
                         </h2>
 
@@ -250,44 +242,38 @@
     <section id="" class="my-4">
         <div class="container">
             <div class="row align-items-center">
-                <!-- Left Content -->
-                <div class="col-lg-6 about-text">
-                    <span class="section-tag">About Us</span>
-                    <h2>Rooted in Nature, Growing with Care</h2>
-                    <p>
-                        We are a passionate plant nursery committed to
-                        nurturing healthy, naturally grown plants that
-                        bring life, freshness, and harmony to your
-                        surroundings. Our journey is deeply rooted
-                        in a love for nature and a belief that plants
-                        have the power to transform everyday living
-                        spaces into calm, positive, and refreshing environments.
-                    </p>
-                    <p>
-                        At our nursery, each plant is grown with patience,
-                        care, and respect for natural processes. We focus on eco-friendly practices,
-                        ensuring that our plants are strong, sustainable,
-                        and well-adapted to thrive in both homes
-                        and outdoor spaces
-                    </p>
-                    <p>
-                        From elegant indoor plants that enhance interiors to outdoor
-                        plants that add beauty to gardens and landscapes, we carefully
-                        cultivate a diverse collection to suit every need.
-                        Our goal is not just to sell plants, but to help you build
-                        a lasting connection with nature.
-                    </p>
-                    <p>
-                        We take pride in offering quality, trust, and personal care—because
-                        every plant we grow carries our commitment to nature and your well-being.
-                    </p>
-                    <div class="d-flex justify-content-center tool-icons gap-4">
-                        <img src="Images/shovel.svg" width="50" class="img-fluid tool-icon ">
-                        <img src="Images/rake.svg" width="50" class="img-fluid tool-icon">
-                        <img src="Images/shears.svg" width="50" class="img-fluid tool-icon">
-                        <img src="Images/scythe.svg" width="50" class="img-fluid tool-icon">
-                    </div>
-                </div>
+               <div class="col-lg-6 about-text">
+    <span class="section-tag">About Us</span>
+    <h2>Rooted in Nature, Growing with Purpose</h2>
+
+    <!-- Vision -->
+    <div class="mt-4">
+        <h5 class="fw-bold text-success">Our Vision</h5>
+        <p>
+            To create a greener, healthier world by nurturing plants that bring
+            prosperity, beauty, and harmony to every home and farm.
+        </p>
+    </div>
+
+    <!-- Mission -->
+    <div class="mt-4">
+        <h5 class="fw-bold text-success">Our Mission</h5>
+        <ul class="list-unstyled ms-3">
+            <li class="mb-2">🌱 To supply high-quality seedlings and saplings</li>
+            <li class="mb-2">🌿 To promote eco-friendly farming and gardening practices</li>
+            <li class="mb-2">🌾 To support farmers and plant lovers with guidance and care</li>
+            <li class="mb-2">🌼 To inspire communities to connect deeply with nature</li>
+        </ul>
+    </div>
+
+    <!-- Icons -->
+    <div class="d-flex justify-content-center tool-icons gap-4 mt-4">
+        <img src="Images/shovel.svg" width="50" class="img-fluid tool-icon">
+        <img src="Images/rake.svg" width="50" class="img-fluid tool-icon">
+        <img src="Images/shears.svg" width="50" class="img-fluid tool-icon">
+        <img src="Images/scythe.svg" width="50" class="img-fluid tool-icon">
+    </div>
+</div>
                 <!-- Right Image -->
                 <div class="col-lg-6 about-image">
                     <img src="Images/AllPlant1.jpeg" alt="Nursery Plants">
@@ -315,20 +301,23 @@
 
                                 <form id="ContactForm">
                                     <div class="mb-3">
-                                        <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" required>
+                                        <input type="text" id="name" name="name" class="form-control"
+                                            placeholder="Your Name" required>
                                     </div>
 
                                     <div class="mb-3">
-                                        <input type="email"  id="email" name="email"  class="form-control" placeholder="Your Email" required>
+                                        <input type="email" id="email" name="email" class="form-control"
+                                            placeholder="Your Email" required>
                                     </div>
 
                                     <div class="mb-3">
-                                        <input type="text" id="subject" name="subject" class="form-control" placeholder="Subject">
+                                        <input type="text" id="subject" name="subject" class="form-control"
+                                            placeholder="Subject">
                                     </div>
 
                                     <div class="mb-3">
-                                        <textarea class="form-control"id="message" name="message"  rows="4" placeholder="Your Message"
-                                            required></textarea>
+                                        <textarea class="form-control" id="message" name="message" rows="4"
+                                            placeholder="Your Message" required></textarea>
                                     </div>
 
                                     <button type="submit" class="btn btn-success px-4">
@@ -353,65 +342,67 @@
             </section>
 
         </div>
+
     </section>
-<footer class="footer-section pt-5 pb-3">
-    <div class="container">
-        <div class="row">
+    <footer class="footer-section pt-5 pb-3">
+        <div class="container">
+            <div class="row">
+                <!-- About -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="footer-title">Sakhare Nursery</h5>
+                    <p class="footer-text">
+                        At Sakhare Green Roots Nursery, we believe in nurturing nature with care and dedication. 
+                        Our nursery offers a wide variety of vegetable seedlings, fruit saplings, flowering plants, 
+                        and herbal greens. With a focus on sustainable practices, we provide healthy, 
+                        strong plants that bring prosperity and greenery to every home and farm.
+                    </p>
+                </div>
 
-            <!-- About -->
-            <div class="col-lg-4 col-md-6 mb-4">
-                <h5 class="footer-title">Sakhare Nursery</h5>
-                <p class="footer-text">
-                    We grow fresh, healthy, and naturally nurtured plants using eco-friendly
-                    practices to bring beauty and greenery to your home and garden.
-                </p>
+                <!-- Contact Info -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="footer-title">Contact Us</h5>
+
+                    <p class="footer-text mb-2">
+                        📍 Sakhare Farm House, Murum Road, Murum, Someshwarnagar,<br>
+                        Tal – Baramati, Dist – Pune, 412306
+                    </p>
+
+                    <p class="footer-text mb-2">
+                        📞 <a href="tel:9823115005">9145119999</a>
+                    </p>
+
+                    <p class="footer-text mb-2">
+                        📧 <a href="mailto:Sakharenursery@gmail.com">Sakharenursery@gmail.com</a>
+                    </p>
+
+                    <p class="footer-text">
+                        🕒 Mon – Sat | 9:00 AM – 6:00 PM
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="footer-title">Quick Links</h5>
+                    <ul class="footer-links list-unstyled">
+                        <li><a href="#Home">Home</a></li>
+                        <li><a href="#About">About Us</a></li>
+                        <li><a href="#Plants">Plants</a></li>
+                        <li><a href="#Contact">Contact</a></li>
+                    </ul>
+                </div>
+
             </div>
 
-            <!-- Contact Info -->
-            <div class="col-lg-4 col-md-6 mb-4">
-                <h5 class="footer-title">Contact Us</h5>
+            <hr class="footer-divider">
 
-                <p class="footer-text mb-2">
-                    📍 Sakhare Farm House, Murum Road, Murum, Someshwarnagar,<br>
-                    Tal – Baramati, Dist – Pune, 412306
-                </p>
-
-                <p class="footer-text mb-2">
-                    📞 <a href="tel:9823115005">9823115005</a>
-                </p>
-
-                <p class="footer-text mb-2">
-                    📧 <a href="mailto:Sakharenursery@gmail.com">Sakharenursery@gmail.com</a>
-                </p>
-
-                <p class="footer-text">
-                    🕒 Mon – Sat | 9:00 AM – 6:00 PM
+            <!-- Bottom -->
+            <div class="text-center">
+                <p class="mb-0 footer-copy">
+                    © 2026 Sakhare Nursery. All Rights Reserved.
                 </p>
             </div>
-
-            <!-- Quick Links -->
-            <div class="col-lg-4 col-md-6 mb-4">
-                <h5 class="footer-title">Quick Links</h5>
-                <ul class="footer-links list-unstyled">
-                    <li><a href="#Home">Home</a></li>
-                    <li><a href="#About">About Us</a></li>
-                    <li><a href="#Plants">Plants</a></li>
-                    <li><a href="#Contact">Contact</a></li>
-                </ul>
-            </div>
-
         </div>
-
-        <hr class="footer-divider">
-
-        <!-- Bottom -->
-        <div class="text-center">
-            <p class="mb-0 footer-copy">
-                © 2026 Sakhare Nursery. All Rights Reserved.
-            </p>
-        </div>
-    </div>
-</footer>
+    </footer>
 
 
 

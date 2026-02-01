@@ -1,3 +1,7 @@
+body{
+  background-color: beige;
+}
+
 #LetterSection {
     background-color: #7a5c3e;
     color: #f4e4e4;
@@ -18,7 +22,7 @@
 
   /* Parallax Section */
         .parallax-section {
-            background-image: url('Images/HomePageImg.png'); /* replace with your image */
+            /* background-image: url('Images/HomePageImg.png');  */
             min-height: 100vh;
             background-attachment: fixed;
             background-position: center;
@@ -38,13 +42,13 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: #6e977b73;
+            /* background: #6e977b73; */
         }
 
         /* Content */
         .parallax-content {
             position: relative;
-            color: #fff;
+            color: #5d4037 !important;
             text-align: center;
             max-width: 700px;
         }
@@ -70,36 +74,6 @@
                 background-attachment: scroll;
             }
         }
-
-/* Transparent navbar */
-.custom-navbar {
-    background: transparent !important;
-    transition: background 0.3s ease;
-}
-
-/* Toggler icon white */
-.custom-navbar .navbar-toggler-icon {
-    filter: invert(1);
-}
-
-/* Nav link hover */
-.custom-navbar .nav-link:hover {
-    color: #9be7a0 !important;
-}
-
-/* Mobile menu background */
-@media (max-width: 991px) {
-    .custom-navbar .navbar-collapse {
-        background: rgba(0, 0, 0, 0.85);
-        padding: 12px;
-        border-radius: 10px;
-    }
-}
-.custom-navbar.scrolled {
-    background: rgba(0, 0, 0, 0.9) !important;
-    backdrop-filter: blur(8px);
-}
-
 
 .split-splide-section {
     background: #f8f9fa;
@@ -163,7 +137,6 @@
   will-change: transform, opacity;
 }
 
-/* Optional depth positioning */
 .img-left {
   transform-origin: center;
 }
@@ -328,4 +301,96 @@
 .footer-copy {
     font-size: 13px;
     color: #b7e4c7;
+}
+
+.navbar {
+}
+
+.nav-link {
+    color: #5d4037 !important; /* Rich brown color */
+    font-weight: bold;
+    padding: 8px 16px !important;
+    position: relative;
+    transition: all 0.4s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Double border animation */
+.nav-link::before,
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #8d6e63; /* Medium brown for borders */
+    transition: width 0.3s ease;
+}
+
+.nav-link::before {
+    top: 0;
+    left: 0;
+}
+
+.nav-link::after {
+    bottom: 0;
+    right: 0;
+}
+
+.nav-link:hover::before,
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link:hover {
+    background-color: rgba(141, 110, 99, 0.1); /* Light brown background */
+    color: #3e2723 !important; /* Darker brown on hover */
+    border-radius: 4px;
+    padding: 8px 16px 6px 16px !important; /* Compensate for border */
+}
+
+
+
+.splide__slide h6 {
+    margin-bottom: 2px;
+}
+
+.splide__slide p {
+    line-height: 1.3;
+}
+
+.splide__slide img {
+    border-radius: 14px;
+}
+
+
+.plantSection .section-tag {
+  display: inline-block;
+  color: #7a5c3e;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+
+#LeftCocoTree1 {
+    position: absolute;
+    bottom: 0%;
+    width: 35%;;
+    height: auto;
+    max-width: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+#LeftCocoTree2 {
+    position: absolute;
+    bottom: 0%;
+    right: 0;
+    transform: rotateY(180deg);
+    width: 35%;;
+    height: auto;
+    max-width: 100%;
+    z-index: 1;
+    pointer-events: none;
 }
