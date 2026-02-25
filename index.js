@@ -219,16 +219,3 @@ gsap.from(split2.words, {
 })
 
 
-let panels = gsap.utils.toArray(".panel");
-
-gsap.to(panels, {
-  xPercent: -100 * (panels.length - 1),
-  ease: "none",
-  scrollTrigger: {
-    trigger: ".horizontal-section",
-    pin: true,
-    scrub: 1,
-    snap: 1 / (panels.length - 1),
-    end: () => "+=" + document.querySelector(".wrapper").offsetWidth
-  }
-});
