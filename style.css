@@ -777,3 +777,167 @@ body {
         font-size: 14px;
         color: #6c757d;
     }
+
+
+.floating-contact {
+    position: fixed;
+    bottom: 30px;
+    right: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 999;
+}
+
+.contact-btn {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.contact-btn img {
+    width: 28px;
+}
+
+/* WhatsApp Style */
+.whatsapp {
+    background: #25D366;
+    animation: pulse 2s infinite;
+}
+
+/* Email Style */
+.email {
+    background: white;
+}
+
+/* Hover Effect */
+.contact-btn:hover {
+    transform: translateY(-6px) scale(1.08);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+/* Mobile Adjust */
+@media (max-width: 768px) {
+    .floating-contact {
+        bottom: 20px;
+        right: 15px;
+    }
+}
+
+
+.option.whatsapp {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    backdrop-filter: blur(14px);
+    background: rgba(255, 255, 255, 0.20);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: all 0.35s ease;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* Icon */
+.option.whatsapp img {
+    width: 28px;
+    transition: 0.3s ease;
+}
+
+/* Hover Effect */
+.option.whatsapp:hover {
+    transform: scale(1.15);
+    box-shadow: 
+        0 12px 30px rgba(0,0,0,0.25),
+        0 0 18px rgba(37, 211, 102, 0.6); /* WhatsApp green glow */
+}
+
+/* Icon Zoom */
+.option.whatsapp:hover img {
+    transform: scale(1.1);
+}
+
+/* Tooltip (Green Variant) */
+.option.whatsapp .tooltip {
+    background: linear-gradient(135deg, #25D366, #128C7E);
+}
+
+/* Email Option Special Styling */
+.option.email {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    backdrop-filter: blur(14px);
+    background: rgba(255, 255, 255, 0.20);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: all 0.35s ease;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* Gmail Icon Size */
+.option.email img {
+    width: 28px;
+    transition: 0.3s ease;
+}
+
+/* Hover Effect */
+.option.email:hover {
+    transform: scale(1.15);
+    box-shadow: 
+        0 12px 30px rgba(0,0,0,0.25),
+        0 0 15px rgba(234, 67, 53, 0.4); /* Gmail red glow */
+}
+
+/* Slight Icon Zoom on Hover */
+.option.email:hover img {
+    transform: scale(1.1);
+}
+
+/* Tooltip Modern Style */
+.tooltip {
+    position: absolute;
+    right: 75px;
+    background: linear-gradient(135deg, #ea4335, #fbbc05);
+    color: #fff;
+    padding: 7px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateX(10px);
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+}
+
+/* Tooltip Show */
+.option.email:hover .tooltip {
+    opacity: 1;
+    transform: translateX(0);
+}
+
