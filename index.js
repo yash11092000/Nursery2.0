@@ -219,3 +219,82 @@ gsap.from(split2.words, {
 })
 
 
+ document.addEventListener('DOMContentLoaded', function () {
+  new Splide('#heroSlider', {
+    type       : 'loop',
+    autoplay   : true,
+    interval   : 4000,
+    speed      : 1000,
+    arrows     : true,
+    pagination : true,
+    pauseOnHover: false,
+
+    breakpoints: {
+      768: {
+        arrows: false,
+      }
+    }
+  }).mount();
+});
+
+
+
+const loader = document.getElementById("formLoader");
+const submitBtn = document.getElementById("submitBtn");
+
+document.getElementById("ContactForm").addEventListener("submit", function(e) {
+  loader.classList.remove("d-none");   // Show loader  
+  e.preventDefault();
+  submitBtn.disabled = true;
+  fetch("https://script.google.com/macros/s/AKfycbxX-SFfwGZohwLYt_0y9UrHzcgmzTnufTLRxiNw4_iBEr1VcVidWl-nY2_soSsdMY1FVQ/exec", {
+    method: "POST",
+    body: JSON.stringify({
+      name: document.getElementById("name").value,
+      email: document.getElementById("email").value,
+      subject: document.getElementById("subject").value,
+      message: document.getElementById("message").value
+    })
+  })
+  .then(res => res.json())
+  .then(data => {
+        Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "Thank you for reaching out. We’ll get back to you soon.",
+        showConfirmButton: false,
+        timer: 1500
+    });
+    document.getElementById("ContactForm").reset();
+  })
+  .catch(err => alert("Error submitting form"))
+  .finally(() => {
+        loader.classList.add("d-none");  
+        submitBtn.disabled = false;
+    });
+});
+
+
+
+const backToTop = document.getElementById("backToTop");
+
+window.addEventListener("scroll", function () {
+
+    const scrollTop = window.scrollY;
+    const windowHeight = window.innerHeight;
+    const docHeight = document.body.offsetHeight;
+  console.log(scrollTop + windowHeight,docHeight * 0.7)
+    // Show button when user reaches near bottom (90%)
+    if (scrollTop + windowHeight >= docHeight * 0.7) {
+        backToTop.style.display = "block";
+    } else {
+        backToTop.style.display = "none";
+    }
+});
+
+// Scroll to top when clicked
+backToTop.addEventListener("click", function () {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});

@@ -26,7 +26,7 @@
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <a class="navbar-brand text-white fw-bold" href="#">
-                <img src="./Images/./LOGO.png" alt="" style="width: 6rem;">
+                <img src="./Images/./LOGO.png" alt="" style="width: 4rem;">
             </a>
 
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -43,6 +43,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-dark" href="#About">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="#Gallary">Gallary</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-dark" href="#Contact">Contact Us</a>
@@ -66,25 +69,62 @@
     <span class="tooltip">Email us</span>
     <img src="./Images/gmail.svg" alt="Email">
 </a>
+   
+</div>
+
+    
+    <div id="HomeSection">
+<section class="hero-slider splide" id="heroSlider">
+  <div class="splide__track">
+    <ul class="splide__list">
+
+      <!-- Slide 1 -->
+      <li class="splide__slide">
+        <div class="slide-content">
+          <img src="./Images/slide1.jpg" class="slide-bg" alt="">
+          <div class="overlay-content">
+            <h1>Roots of Green, Wings of Life</h1>
+            <p>Welcome To Sakhare Nursery</p>
+            <a href="#Plants" class="btn btn-success btn-lg">
+              Explore Plants
+            </a>
+          </div>
+        </div>
+      </li>
+
+      <!-- Slide 2 -->
+      <li class="splide__slide">
+        <div class="slide-content">
+          <img src="./Images/slide2.jpg" class="slide-bg" alt="">
+          <div class="overlay-content">
+            <h1>Fresh Indoor Plants</h1>
+            <p>Bring Nature Into Your Home</p>
+            <a href="#Gallary" class="btn btn-success btn-lg">
+              View Collection
+            </a>
+          </div>
+        </div>
+      </li>
+
+      <!-- Slide 3 -->
+      <li class="splide__slide">
+        <div class="slide-content">
+          <img src="./Images/slide3.jpg" class="slide-bg" alt="">
+          <div class="overlay-content">
+            <h1>Decorative Garden Plants</h1>
+            <p>Beautify Your Outdoor Space</p>
+            <a href="#Contact" class="btn btn-success btn-lg">
+              Explore More
+            </a>
+          </div>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+</section>
+
     </div>
-
-    <div style="position: relative;">
-
-        <img src="./Images/CocoTree.png" alt="" id="LeftCocoTree1">
-        <img src="./Images/CocoTree.png" alt="" id="LeftCocoTree2">
-        <section class="parallax-section">
-            <div class="parallax-content AnimatedText0">
-                <h1>Roots of Green, Wings of Life</h1>
-                <p>Welcome To Sakhare Nursery</p>
-                <a href="#Plants" class="btn btn-success btn-lg">
-                    Explore Plants
-                </a>
-                <img src="./Images/LeftPlant.png" alt="">
-            </div>
-        </section>
-
-    </div>
-
 
     <div id="Plants">
 
@@ -295,12 +335,12 @@
     </div>
 
 
-    <div id="Gallery">
+    <div id="Gallary">
         <section class="gallery-section">
             <div class="container">
 
                 <div class="text-center mb-5">
-                    <h2 class="fw-bold">Our Nursery Collection</h2>
+                    <h2 class="fw-bold" style="color: #7a5c3e;;">Gallary</h2>
                     <p class="text-muted">Explore our beautiful plant varieties</p>
                 </div>
 
@@ -394,7 +434,11 @@
                                     <p class="text-muted mb-4">
                                         Have a question about plants or bulk orders? Send us a message.
                                     </p>
-
+                                    <div class="d-flex justify-content-center d-none" id="formLoader">
+                                        <div class="spinner-border" role="status">
+                                            <span class="sr-only"></span>
+                                        </div>
+                                    </div>
                                     <form id="ContactForm">
                                         <div class="mb-3">
                                             <input type="text" id="name" name="name" class="form-control"
@@ -416,7 +460,7 @@
                                                 placeholder="Your Message" required></textarea>
                                         </div>
 
-                                        <button type="submit" class="btn btn-success px-4">
+                                        <button type="submit" id="submitBtn" class="btn btn-success px-4">
                                             Send Message
                                         </button>
                                     </form>
@@ -479,14 +523,22 @@
                 </div>
 
                 <!-- Quick Links -->
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <h5 class="footer-title">Quick Links</h5>
-                    <ul class="footer-links list-unstyled">
-                        <li><a href="#Home">Home</a></li>
-                        <li><a href="#About">About Us</a></li>
-                        <li><a href="#Plants">Plants</a></li>
-                        <li><a href="#Contact">Contact</a></li>
-                    </ul>
+                <div class="col-lg-4 col-md-6 mb-4 ">
+                    <div class="d-flex" style="justify-content: space-between;align-items: center;">
+
+                        <div>
+                            <h5 class="footer-title">Quick Links</h5>
+                            <ul class="footer-links list-unstyled">
+                                <li><a href="#Home">Home</a></li>
+                                <li><a href="#About">About Us</a></li>
+                            <li><a href="#Plants">Plants</a></li>
+                            <li><a href="#Contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <img src="./Images/Qrcode.svg" class="img-thumbnail" style="width:12rem">
+                    </div>
+                </div>
                 </div>
 
             </div>
@@ -503,6 +555,26 @@
     </footer>
 
 
+<button id="backToTop"
+        class="btn position-fixed"
+        style="bottom:30px; left:50%; display:none; 
+               background: white;
+               color: #28a745;
+               width: 60px;
+               height: 60px;
+               border-radius: 50%;
+               border: 3px solid #28a745;
+               box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+               transition: all 0.4s ease;
+               font-size: 28px;
+               font-weight: bold;
+               transform: translateX(-50%);
+               overflow: hidden;">
+    <span style="display: inline-block; transition: transform 0.3s ease;">↑</span>
+    <span style="position: absolute; left: 50%; top: 100%; transform: translateX(-50%); 
+                 transition: top 0.3s ease;">↑</span>
+</button>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
@@ -512,6 +584,7 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollSmoother.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/SplitText.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script src="index.js"></script>
 </body>
