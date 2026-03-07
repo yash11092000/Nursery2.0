@@ -85,7 +85,7 @@ body {
 }
 
 .split-splide-section {
-  background: #f8f9fa;
+  /* background: #f8f9fa; */
 }
 
 /* 
@@ -98,7 +98,7 @@ body {
 
 /* Content side */
 .content-side {
-  background: #ffffff;
+  /* background: #ffffff; */
 }
 
 /* Mobile behavior */
@@ -793,7 +793,7 @@ body {
 /* gallary */
  .gallery-section {
         padding: 40px 0;
-        background: #f4faf4;
+        /* background: #f4faf4; */
     }
 
     /* Masonry Layout */
@@ -1132,3 +1132,4 @@ body {
   font-weight: 700;
   font-style: normal;
 }
+
