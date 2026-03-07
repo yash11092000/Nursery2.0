@@ -81,7 +81,46 @@ t1.to("#PlantInfoSection .RightText", {
 }, "Text")
 
 
+let mm = gsap.matchMedia();
 
+mm.add("(max-width: 577px)", () => {
+
+  let t1 = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#PlantInfoSection",
+      start: "10% 50%",
+      end: "50% 50%",
+      scrub: 4
+    }
+  });
+
+  t1.to("#PlantInfoSection .LeftText", {
+    x: 0
+  }, "Text")
+
+  .to("#PlantInfoSection .RightText", {
+    x: 0
+  }, "Text");
+
+}); 
+
+
+
+mm.add("(min-width: 578px)", () => {
+
+  let t1 = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#PlantInfoSection",
+      start: "10% 50%",
+      end: "50% 50%",
+      scrub: 4
+    }
+  });
+
+  t1.to(".LeftText", { x: "-20vw" }, "Text")
+    .to(".RightText", { x: "20vw" }, "Text");
+
+});
 
 const marquee = document.querySelector(".marquee");
 
@@ -282,8 +321,6 @@ window.addEventListener("scroll", function () {
     const scrollTop = window.scrollY;
     const windowHeight = window.innerHeight;
     const docHeight = document.body.offsetHeight;
-  console.log(scrollTop + windowHeight,docHeight * 0.7)
-    // Show button when user reaches near bottom (90%)
     if (scrollTop + windowHeight >= docHeight * 0.7) {
         backToTop.style.display = "block";
     } else {
